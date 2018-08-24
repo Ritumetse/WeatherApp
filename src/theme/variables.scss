@@ -40,7 +40,12 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222
 );
-
+$toolbar-background: lightblue;
+$toolbar-border-color: lightblue;
+$toolbar-text-color: white;
+$toolbar-active-color: black;
+$toolbar-inactive-color: white;
+$toolbar-title-color : #000;
 
 // App iOS Variables
 // --------------------------------------------------

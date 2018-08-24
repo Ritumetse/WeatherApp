@@ -1,14 +1,58 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="Secondary">
     <ion-title>
-      Ionic Blank
-    </ion-title>
+     weather
+   </ion-title>
   </ion-navbar>
-</ion-header>
+ </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+ <ion-content class="Weather" padding >
+
+    <ion-card  >
+        <ion-card-content class="display">
+    <ion-item class="cities" >
+        <ion-label style="color:black" >city</ion-label>
+        <ion-select [(ngModel)]='city' (ionChange)="getWheather($event)">
+          <ion-option value="Pretoria" >Pretoria</ion-option>
+          <ion-option value="Johannesburg" >Johannesburg</ion-option>
+          <ion-option value="Tembisa" >Tembisa</ion-option>
+          <ion-option value="Durban" >Durban</ion-option>
+          <ion-option value="Polokwane" >Polokwane</ion-option>
+          <ion-option value="Venda" >Venda</ion-option>
+        </ion-select>
+      </ion-item>
+
+        
+           <ion-item class=" main" >{{main}}
+           
+           </ion-item>
+
+
+            <ion-item class="hum">
+                <strong>Humidity:</strong>{{humidity}}%
+              </ion-item>
+              <ion-item class=" wind" >
+                  <strong>Wind:</strong>{{wind}}km/h
+                </ion-item>
+                
+                <ion-item class=" descrip">
+                    <strong>Description:</strong>{{description}}
+                  </ion-item>
+
+              <ion-item class="temp">
+                <strong>Temp:</strong>{{Temperature}}&deg;C
+                </ion-item>
+
+
+              
+
+
+              <ion-item class=" date" >
+                  <strong>Date:</strong>{{date * 1000 | date}}
+                </ion-item>
+              </ion-card-content>
+              </ion-card>
+           
+
+
+  </ion-content>
