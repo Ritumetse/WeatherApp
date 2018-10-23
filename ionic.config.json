@@ -1,5 +1,7 @@
 {
   "name": "WApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

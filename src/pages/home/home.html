@@ -6,53 +6,58 @@
   </ion-navbar>
  </ion-header>
 
- <ion-content class="Weather" padding >
+ <ion-content class="Weather" padding  >
 
-    <ion-card  >
-        <ion-card-content class="display">
-    <ion-item class="cities" >
-        <ion-label style="color:black" >city</ion-label>
-        <ion-select [(ngModel)]='city' (ionChange)="getWheather($event)">
-          <ion-option value="Pretoria" >Pretoria</ion-option>
-          <ion-option value="Johannesburg" >Johannesburg</ion-option>
-          <ion-option value="Tembisa" >Tembisa</ion-option>
-          <ion-option value="Durban" >Durban</ion-option>
-          <ion-option value="Polokwane" >Polokwane</ion-option>
-          <ion-option value="Venda" >Venda</ion-option>
-        </ion-select>
-      </ion-item>
-
+          <ion-item id="rounded"style="background-color:transparent">
+            <ion-label style ="color:black ">CITY</ion-label>
+            <ion-select [(ngModel)]="city"ng-model="category.colour"required (ionChange)='getWeather($event)'>
+              <ion-option value="pretoria">Pretoria</ion-option>
+              <ion-option value="johannesburg">Johannesburg</ion-option>
+              <ion-option value="tembisa">Tembisa</ion-option>
+              <ion-option value="giyani">Giyani</ion-option>
+              <ion-option value="polokwane">Polokwane</ion-option>
+              <ion-option value="tzaneen">Tzaneen</ion-option>
+            </ion-select>
+          </ion-item>
+<ion-card class ="cities" >
         
-           <ion-item class=" main" >{{main}}
+           <ion-item class=" main" style="background-color:transparent">{{main}}
            
            </ion-item>
 
 
-            <ion-item class="hum">
-                <strong>Humidity:</strong>{{humidity}}%
+            <ion-item class="hum" style="background-color:transparent">
+                <ion-icon name="aperture" item-left></ion-icon>
+                <strong >Humidity:</strong>{{humidity}}%
               </ion-item>
-              <ion-item class=" wind" >
-                  <strong>Wind:</strong>{{wind}}km/h
+              <ion-item class=" wind"style="background-color:transparent" >
+                  <ion-icon name="color-wand" item-left></ion-icon>
+                  <strong >Wind:</strong>{{wind}}km/h
                 </ion-item>
                 
-                <ion-item class=" descrip">
-                    <strong>Description:</strong>{{description}}
+                <ion-item class=" descrip"style="background-color:transparent">
+                    <ion-icon name="desktop" item-left></ion-icon>
+                    <strong > Description:</strong>{{description}}
                   </ion-item>
 
-              <ion-item class="temp">
-                <strong>Temp:</strong>{{Temperature}}&deg;C
-                </ion-item>
-
-
+              <ion-item class="temp"style="background-color:transparent">
+                  <ion-icon name="thermometer" item-left></ion-icon>
+                  <strong>Max_Temp:</strong>{{temp_max}}&deg;C
               
-
-
-              <ion-item class=" date" >
-                  <strong>Date:</strong>{{date * 1000 | date}}
                 </ion-item>
-              </ion-card-content>
+                <ion-item class="temp"style="background-color:transparent">
+                  <ion-icon name="thermometer" item-left></ion-icon>
+                  <strong>Min_Temp:</strong>{{temp_min}}&deg;C
+              
+                </ion-item>
+
+
+              <ion-item class=" date"style="background-color:transparent" >
+                  <strong >
+                      <ion-icon name="calendar" item-left></ion-icon>  Date:</strong>{{date * 1000 | date}}
+                </ion-item>
+            
               </ion-card>
-           
 
 
   </ion-content>

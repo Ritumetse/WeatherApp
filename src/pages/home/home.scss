@@ -7,37 +7,41 @@ page-home {
 
        .cities{
            background-color:lightblue;
+           color:lightskyblue;
        }
        .display{
         box-shadow: 0px 1px 5px #555;
-        font-size: 2rem;
-           background-color:lightblue;
-           padding: 10px 20px;
-           display: grid;
+         background-color:lightblue;
+        
+       
          
          
 
        }
-       .hum{
-           background-color:transparent;
-       }
-       .temp{
-        background-color:transparent;
-    }
-    .wind{
-        background-color:transparent;
-    }
-    .descrip{
-        background-color:transparent;
-    }
-    .date{
-        background-color:transparent;
-    }
-    .main{
-        background-color:transparent;
-    }
+    //    .hum{
+    //        background-color:transparent;
+           
+    //   }
+    //    .temp{
+    //     background-color:transparent;
+    // }
+    // .wind{
+    //     background-color:transparent;
+    // }
+    // .descrip{
+    //     background-color:transparent;
+    // }
+    // .date{
+    //     background-color:transparent;
+    // }
+    // .main{
+    //     background-color:transparent;
+    // }
     [text-color="my-custom-color"] {
         color: blue;
+    }
+    ion-card{
+        color: lightskyblue;
     }
     }
 
